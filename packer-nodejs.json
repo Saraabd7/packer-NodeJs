@@ -35,19 +35,6 @@
       "type": "chef-solo",
       "cookbook_paths": ["./berks-cookbooks"],
       "run_list":["node::default"]
-    },
-    {
-      "type": "shell",
-      "inline": ["mkdir /home/ubuntu/app-nodejs"]
-    },
-    {
-      "type": "file",
-      "source": "app/",
-      "destination": "/home/ubuntu/app-nodejs"
-    },
-    {
-      "type": "shell",
-      "inline": ["cd /home/ubuntu/app-nodejs/", "sudo npm install", "sudo npm test"]
     }
   ]
 }
